@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CyberGuard - Platform Edukasi Kesadaran Keamanan Siber Sekolah">
+    <title>CyberGuard | Security Learning Platform</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="auth-container">
+
+    <!-- PANEL KIRI -->
+    <section class="hero-panel">
+
+        <div class="brand">
+            <div class="brand-icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M12 2L20 5V11C20 16.5 16.5 20 12 22C7.5 20 4 16.5 4 11V5L12 2Z"
+                        stroke="white" stroke-width="2"/>
+                    <path d="M8.5 12L11 14.5L16 9.5"
+                        stroke="white" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <span>Cyber<span class="brand-green">Guard</span></span>
+        </div>
+
+        <div class="hero-content">
+
+            <div class="hero-label">
+                <span></span>
+                Platform Edukasi Siber #1 untuk Sekolah
+            </div>
+
+            <h1>
+                Lebih cerdas.<br>
+                <span class="gradient-text">Lebih aman.</span><br>
+                Di dunia digital.
+            </h1>
+
+            <p class="hero-description">
+                Bangun kebiasaan digital yang aman melalui
+                materi interaktif, kuis, dan simulasi ancaman
+                siber yang nyata.
+            </p>
+
+            <!-- Ilustrasi keamanan -->
+            <div class="security-visual">
+
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+
+                <div class="orbit-dot dot-one"></div>
+                <div class="orbit-dot dot-two"></div>
+                <div class="orbit-dot dot-three"></div>
+                <div class="orbit-dot dot-four"></div>
+
+                <div class="system-status">
+                    <div class="status-icon">♙</div>
+                    <div>
+                        <small>Status sistem</small>
+                        <strong>Terindungi</strong>
+                    </div>
+                    <span class="online-dot"></span>
+                </div>
+
+                <div class="main-shield">
+                    <svg viewBox="0 0 160 180" fill="none">
+                        <path d="M80 5L150 35L140 115L80 170L20 115L10 35L80 5Z"
+                            fill="#0D9488" fill-opacity=".25"
+                            stroke="#10B981" stroke-opacity=".55"
+                            stroke-width="2"/>
+                        <path d="M80 42L116 58V83C116 109 101 127 80 140C59 127 44 109 44 83V58L80 42Z"
+                            stroke="#6EE7B7" stroke-width="9"
+                            stroke-linejoin="round"/>
+                        <path d="M63 88L76 101L101 75"
+                            stroke="#6EE7B7" stroke-width="9"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"/>
+                    </svg>
+                </div>
+
+                <div class="threat-status">
+                    <div class="threat-icon">⚠</div>
+                    <div>
+                        <small>Ancaman digital</small>
+                        <strong>2.481</strong>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="community">
+
+            <div class="avatars">
+                <span>AR</span>
+                <span>DS</span>
+                <span>MF</span>
+                <span>+</span>
+            </div>
+
+            <div class="community-text">
+                <strong>5.000+ warga sekolah</strong>
+                <small>Belajar aman bersama kami</small>
+            </div>
+
+        </div>
+
+        <div class="hero-footer">
+            © 2026 CyberGuard. Semua hak dilindungi.
+        </div>
+
+    </section>
+
+
+    <!-- PANEL KANAN -->
+    <section class="form-panel">
+
+        <div class="form-wrapper">
+
+            <div class="form-icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                    <rect x="4" y="10" width="16" height="12"
+                        rx="2" stroke="currentColor" stroke-width="2"/>
+                    <path d="M8 10V7C8 1.5 16 1.5 16 7V10"
+                        stroke="currentColor" stroke-width="2"/>
+                </svg>
+            </div>
+
+            <div class="form-heading">
+                <h2 id="formTitle">Selamat Datang!</h2>
+                <p id="formSubtitle">
+                    Masuk untuk melanjutkan perjalanan belajarmu.
+                </p>
+            </div>
+
+            <!-- TAB MASUK DAN DAFTAR -->
+            <div class="auth-tabs">
+                <button class="tab-button active" id="loginTab" type="button">
+                    Masuk
+                </button>
+
+                <button class="tab-button" id="registerTab" type="button">
+                    Daftar
+                </button>
+            </div>
+
+            <!-- FORM LOGIN -->
+            <form id="loginForm" class="auth-form">
+
+                <div class="input-group">
+                    <label for="loginEmail">Email atau username</label>
+
+                    <div class="input-wrapper">
+                        <span class="input-icon">✉</span>
+                        <input
+                            type="email"
+                            id="loginEmail"
+                            placeholder="nama@sekolah.id"
+                            autocomplete="email"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="loginPassword">Password</label>
+
+                    <div class="input-wrapper">
+                        <span class="input-icon">♙</span>
+                        <input
+                            type="password"
+                            id="loginPassword"
+                            placeholder="Minimal 6 karakter"
+                            autocomplete="current-password"
+                            minlength="6"
+                            required
+                        >
+
+                        <button class="toggle-password"
+                            type="button"
+                            data-target="loginPassword">
+                            ◉
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-options">
+                    <label class="remember">
+                        <input type="checkbox" id="rememberMe">
+                        <span>Ingat saya</span>
+                    </label>
+
+                    <button type="button" class="forgot-button" id="forgotPassword">
+                        Lupa password?
+                    </button>
+                </div>
+
+                <button type="submit" class="submit-button">
+                    <span>Masuk Sekarang</span>
+                    <span class="arrow">→</span>
+                </button>
+
+            </form>
+
+
+            <!-- FORM REGISTER -->
+            <form id="registerForm" class="auth-form hidden">
+
+                <div class="input-group">
+                    <label for="registerName">Nama lengkap</label>
+                    <div class="input-wrapper">
+                        <input
+                            type="text"
+                            id="registerName"
+                            placeholder="Masukkan nama lengkap"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="registerEmail">Email</label>
+                    <div class="input-wrapper">
+                        <input
+                            type="email"
+                            id="registerEmail"
+                            placeholder="nama@sekolah.id"
+                            autocomplete="email"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="registerPassword">Password</label>
+                    <div class="input-wrapper">
+                        <input
+                            type="password"
+                            id="registerPassword"
+                            placeholder="Minimal 6 karakter"
+                            minlength="6"
+                            required
+                        >
+                        <button class="toggle-password"
+                            type="button"
+                            data-target="registerPassword">◉</button>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-button">
+                    <span>Buat Akun Sekarang</span>
+                    <span class="arrow">→</span>
+                </button>
+
+            </form>
+
+            <div id="message" class="message" aria-live="polite"></div>
+
+            <div class="register-footer">
+                <span id="footerText">Belum punya akun?</span>
+                <button type="button" id="footerSwitch">Daftar Sekarang</button>
+            </div>
+
+            <div class="security-note">
+                <span>♧</span>
+                Data kamu dilindungi dengan enkripsi berstandar tinggi.
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+
+<script src="js/firebase.js"></script>
+<script src="js/auth.js"></script>
+
+</body>
+</html>

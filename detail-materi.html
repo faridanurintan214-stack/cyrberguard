@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detail materi edukasi keamanan siber CyberGuard">
+
+    <title>Detail Materi | CyberGuard</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/detail-materi.css">
+
+    <!-- FONT POPPINS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="dashboard-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+
+        <a href="pages/siswa/dashboard.html"class="brand">
+            <span class="brand-icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M12 2L20 5V11C20 16.5 16.5 20 12 22C7.5 20 4 16.5 4 11V5L12 2Z" stroke="white" stroke-width="2"/>
+                    <path d="M8.5 12L11 14.5L16 9.5" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </span>
+            <span>Cyber<span>Guard</span></span>
+        </a>
+
+        <div class="sidebar-content">
+
+            <div class="menu-label">MENU UTAMA</div>
+
+            <nav class="sidebar-nav">
+
+                <a href="dashboard.html" class="nav-link">
+                    <span>▦</span>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="materi.html" class="nav-link active">
+                    <span>▤</span>
+                    <span>Materi Edukasi</span>
+                </a>
+
+                <a href="kuis.html" class="nav-link">
+                    <span>◎</span>
+                    <span>Kuis Keamanan Siber</span>
+                </a>
+
+                <a href="simulasi-phishing.html" class="nav-link">
+                    <span>✉</span>
+                    <span>Simulasi Phishing</span>
+                </a>
+
+                <a href="tips.html" class="nav-link">
+                    <span>✧</span>
+                    <span>Tips Keamanan</span>
+                </a>
+
+            </nav>
+
+            <div class="menu-label account-label">AKUN</div>
+
+            <nav class="sidebar-nav">
+
+                <a href="riwayat.html" class="nav-link">
+                    <span>◷</span>
+                    <span>Riwayat Pembelajaran</span>
+                </a>
+
+                <a href="profil.html" class="nav-link">
+                    <span>♙</span>
+                    <span>Profil Saya</span>
+                </a>
+
+            </nav>
+
+            <div class="security-level">
+                <div class="level-heading">
+                    <span>Level keamanan</span>
+                    <strong>78%</strong>
+                </div>
+
+                <div class="level-track">
+                    <div class="level-fill"></div>
+                </div>
+
+                <p>Terus belajar untuk naik level!</p>
+            </div>
+
+            <button class="logout-button" id="logoutButton">
+                ⇥ Keluar
+            </button>
+
+        </div>
+    </aside>
+
+
+    <!-- AREA UTAMA -->
+    <main class="main-area">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <button class="mobile-menu-button" id="mobileMenuButton" aria-label="Buka menu">
+                ☰
+            </button>
+
+            <div class="search-box">
+                <svg viewBox="0 0 24 24" fill="none">
+                    <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+                    <path d="M16 16L21 21" stroke="currentColor" stroke-width="2"/>
+                </svg>
+
+                <input type="search" placeholder="Cari materi, kuis, atau tips...">
+            </div>
+
+            <div class="topbar-right">
+
+                <div class="notification-container">
+                    <button class="notification-button" id="notificationButton" aria-label="Notifikasi">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M18 8A6 6 0 0 0 6 8C6 15 3 15 3 18H21C21 15 18 15 18 8Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M10 21H14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span class="notification-dot"></span>
+                    </button>
+
+                    <div class="notification-dropdown" id="notificationDropdown">
+                        <strong>Notifikasi</strong>
+                        <p>Terus tingkatkan pengetahuan keamanan digitalmu.</p>
+                    </div>
+                </div>
+
+               <button class="profile-button" id="profileButton">
+                <span class="profile-avatar" id="studentAvatar">?</span>
+
+                <span class="profile-info">
+                    <strong id="studentName">Memuat...</strong>
+                    <small>Siswa</small>
+                </span>
+
+                <span class="profile-chevron">⌄</span>
+            </button>
+                <div class="profile-dropdown" id="profileDropdown">
+                    <a href="../../profil.html">Profil Saya</a>
+                    <button id="dropdownLogout">Keluar</button>
+                </div>
+
+            </div>
+        </header>
+
+
+        <!-- KONTEN DETAIL -->
+        <div class="dashboard-content detail-content">
+
+            <!-- NAVIGASI KEMBALI -->
+            <a href="materi.html" class="back-to-materi">
+                <span>←</span> Kembali ke Materi Edukasi
+            </a>
+
+
+            <!-- HEADER MATERI -->
+            <section class="detail-header">
+
+                <div class="detail-header-info">
+
+                    <div class="detail-breadcrumb">
+                        <span>Materi Edukasi</span>
+                        <span>/</span>
+                        <span id="breadcrumbTitle">Detail Materi</span>
+                    </div>
+
+                    <div class="detail-badges">
+                        <span class="detail-category" id="detailCategory">DASAR</span>
+                        <span class="detail-duration" id="detailDuration">◷ 8 menit</span>
+                    </div>
+
+                    <h1 id="detailTitle">Mengenal Cyber Security</h1>
+
+                    <p id="detailDescription">
+                        Memahami pengertian keamanan siber, manfaat,
+                        serta pentingnya melindungi aktivitas digital.
+                    </p>
+
+                </div>
+
+                <div class="detail-header-visual">
+                    <div class="detail-visual-circle"></div>
+
+                    <div class="detail-visual-icon" id="detailVisualIcon">
+                        🛡️
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- PROGRESS BELAJAR -->
+            <section class="detail-progress-card">
+
+                <div class="detail-progress-info">
+                    <div>
+                        <strong>Progress Pembelajaran</strong>
+                        <p id="progressDescription">Mulai pelajari materi ini.</p>
+                    </div>
+
+                    <span id="progressPercent">0%</span>
+                </div>
+
+                <div class="detail-progress-track">
+                    <div class="detail-progress-fill" id="detailProgressFill"></div>
+                </div>
+
+            </section>
+
+
+            <!-- AREA PEMBELAJARAN -->
+            <div class="detail-learning-layout">
+
+                <!-- ISI MATERI -->
+                <article class="detail-article">
+
+                    <div class="article-heading">
+                        <span class="article-heading-icon">📖</span>
+
+                        <div>
+                            <h2>Materi Pembelajaran</h2>
+                            <p>Pelajari penjelasan berikut dengan saksama.</p>
+                        </div>
+                    </div>
+
+                    <div class="article-content" id="articleContent">
+
+                        <h2>Apa Itu Cyber Security?</h2>
+
+                        <p>
+                            Cyber Security atau keamanan siber adalah upaya
+                            untuk melindungi sistem komputer, jaringan,
+                            perangkat, dan data dari serangan digital,
+                            akses tidak sah, maupun penyalahgunaan informasi.
+                        </p>
+
+                        <p>
+                            Di era digital, hampir semua aktivitas menggunakan
+                            internet. Mulai dari komunikasi, belajar, berbelanja,
+                            hingga menyimpan informasi pribadi. Karena itu,
+                            keamanan siber menjadi hal yang sangat penting.
+                        </p>
+
+                        <h2>Mengapa Keamanan Siber Penting?</h2>
+
+                        <p>
+                            Keamanan siber membantu melindungi informasi
+                            pribadi dan mencegah pihak yang tidak bertanggung
+                            jawab mengambil alih akun atau perangkat kita.
+                        </p>
+
+                        <div class="article-highlight">
+                            <strong>Ingat!</strong>
+                            <p>
+                                Jangan sembarangan membagikan informasi pribadi
+                                di internet. Selalu periksa keamanan situs
+                                dan aplikasi yang kamu gunakan.
+                            </p>
+                        </div>
+
+                        <h2>Contoh Ancaman Keamanan Siber</h2>
+
+                        <ul>
+                            <li><strong>Phishing:</strong> Upaya penipuan untuk mendapatkan informasi pribadi.</li>
+                            <li><strong>Malware:</strong> Perangkat lunak berbahaya yang dapat merusak sistem.</li>
+                            <li><strong>Pencurian akun:</strong> Pengambilalihan akun tanpa izin pemiliknya.</li>
+                            <li><strong>Kebocoran data:</strong> Terungkapnya informasi pribadi kepada pihak yang tidak berwenang.</li>
+                        </ul>
+
+                        <h2>Kesimpulan</h2>
+
+                        <p>
+                            Keamanan siber merupakan tanggung jawab setiap
+                            pengguna internet. Dengan memahami ancaman digital
+                            dan menerapkan kebiasaan yang aman, kita dapat
+                            melindungi diri saat menggunakan teknologi.
+                        </p>
+
+                    </div>
+
+
+                    <!-- POIN PENTING -->
+                    <div class="important-points">
+
+                        <h3>✦ Poin Penting</h3>
+
+                        <ul>
+                            <li>Jaga kerahasiaan informasi pribadi.</li>
+                            <li>Gunakan kata sandi yang kuat.</li>
+                            <li>Jangan membuka tautan mencurigakan.</li>
+                            <li>Selalu perbarui perangkat dan aplikasi.</li>
+                        </ul>
+
+                    </div>
+
+
+                    <!-- TOMBOL SELESAI -->
+                    <div class="complete-section">
+
+                        <div>
+                            <strong>Sudah memahami materi ini?</strong>
+                            <p>Tandai selesai setelah kamu mempelajarinya.</p>
+                        </div>
+
+                        <button class="complete-button" id="completeButton">
+                            ✓ Tandai Selesai
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- SIDEBAR MATERI -->
+                <aside class="detail-sidebar">
+
+                    <div class="detail-side-card">
+
+                        <h3>Informasi Materi</h3>
+
+                        <div class="detail-info-row">
+                            <span>Kategori</span>
+                            <strong id="sideCategory">Dasar</strong>
+                        </div>
+
+                        <div class="detail-info-row">
+                            <span>Durasi</span>
+                            <strong id="sideDuration">8 menit</strong>
+                        </div>
+
+                        <div class="detail-info-row">
+                            <span>Tingkat</span>
+                            <strong id="sideLevel">Pemula</strong>
+                        </div>
+
+                        <div class="detail-info-row">
+                            <span>Status</span>
+                            <strong class="status-not-started" id="sideStatus">Belum selesai</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="detail-side-card">
+
+                        <h3>Materi Selanjutnya</h3>
+
+                        <div class="next-material">
+                            <span class="next-material-icon">🔐</span>
+
+                            <div>
+                                <strong id="nextMaterialTitle">Keamanan Password</strong>
+                                <small>Materi berikutnya</small>
+                            </div>
+                        </div>
+
+                        <a href="detail-materi.html?id=2" class="next-material-link" id="nextMaterialLink">
+                            Pelajari Selanjutnya →
+                        </a>
+
+                    </div>
+
+                </aside>
+
+            </div>
+
+
+            <!-- FOOTER -->
+            <footer class="dashboard-footer">
+                © 2026 CyberGuard — Platform Edukasi Kesadaran Keamanan Siber Sekolah.
+            </footer>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<!-- NAVIGASI MOBILE -->
+<nav class="mobile-bottom-nav">
+
+    <a href="pages/siswa/dashboard.html" class="mobile-nav-link">
+        <span>⌂</span>
+        <small>Home</small>
+    </a>
+
+    <a href="materi.html" class="mobile-nav-link active">
+        <span>▤</span>
+        <small>Materi</small>
+    </a>
+
+    <a href="/kuis.html" class="mobile-nav-link">
+        <span>◎</span>
+        <small>Kuis</small>
+    </a>
+
+    <a href="/profil.html" class="mobile-nav-link">
+        <span>♙</span>
+        <small>Profil</small>
+    </a>
+
+</nav>
+
+<!-- FIREBASE SDK -->
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+
+<!-- FIREBASE CONFIGURATION -->
+<script src="js/firebase.js"></script>
+
+<!-- DATABASE -->
+<script src="js/database.js"></script>
+
+<!-- DETAIL MATERI -->
+<script src="js/detail-materi.js"></script>
+
+</body>
+</html>

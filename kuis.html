@@ -1,0 +1,301 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis Keamanan Siber | CyberGuard</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/kuis.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="dashboard-layout">
+
+   
+
+<!-- SIDEBAR -->
+<aside class="sidebar" id="sidebar">
+
+    <a href="pages/siswa/dashboard.html" class="brand">
+        <span class="brand-icon">
+            <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 2L20 5V11C20 16.5 16.5 20 12 22C7.5 20 4 16.5 4 11V5L12 2Z" stroke="white" stroke-width="2"/>
+                <path d="M8.5 12L11 14.5L16 9.5" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        </span>
+        <span>Cyber<span>Guard</span></span>
+    </a>
+
+    <div class="sidebar-content">
+
+        <div class="menu-label">MENU UTAMA</div>
+
+        <nav class="sidebar-nav">
+
+            <a href="pages/siswa/dashboard.html" class="nav-link">
+                <svg viewBox="0 0 24 24" fill="none">
+                    <rect x="3" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2"/>
+                    <rect x="14" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2"/>
+                    <rect x="3" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2"/>
+                    <rect x="14" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="materi.html" class="nav-link">
+                <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M12 7C9 4 5 4 2 5V20C5 19 9 19 12 22C15 19 19 19 22 20V5C19 4 15 4 12 7Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                    <path d="M12 7V22" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                <span>Materi Edukasi</span>
+            </a>
+
+            <a href="kuis.html" class="nav-link active">
+                <svg viewBox="0 0 24 24" fill="none">
+                    <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+                    <path d="M9.5 9C9.5 5.5 15 5.5 15 9C15 11 12 11.5 12 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <circle cx="12" cy="17.5" r="1" fill="currentColor"/>
+                </svg>
+                <span>Kuis Keamanan Siber</span>
+            </a>
+
+            <a href="simulasi-phishing.html" class="nav-link">
+                <svg viewBox="0 0 24 24" fill="none">
+                    <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
+                    <path d="M3 6L12 13L21 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>Simulasi Phishing</span>
+            </a>
+
+            <a href="tips.html" class="nav-link">
+                <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M9 18H15M10 22H14M8.5 14.5C7.5 13.5 6 12 6 9.5A6 6 0 0 1 18 9.5C18 12 16.5 13.5 15.5 14.5C15 15 15 16 15 16H9C9 16 9 15 8.5 14.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>Tips Keamanan</span>
+            </a>
+
+        </nav>
+
+        <div class="menu-label account-label">AKUN</div>
+
+        <nav class="sidebar-nav">
+
+            <a href="riwayat.html" class="nav-link">
+                <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M3 12A9 9 0 1 0 6 5L3 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M3 3V8H8M12 7V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>Riwayat Pembelajaran</span>
+            </a>
+
+            <a href="profil.html" class="nav-link">
+                <svg viewBox="0 0 24 24" fill="none">
+                    <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/>
+                    <path d="M4 21C4 16.5 7 14 12 14C17 14 20 16.5 20 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>Profil Saya</span>
+            </a>
+
+        </nav>
+
+        <!-- LEVEL KEAMANAN -->
+        <div class="security-level">
+            <div class="level-heading">
+                <span>Level keamanan</span>
+                <strong>78%</strong>
+            </div>
+
+            <div class="level-track">
+                <div class="level-fill"></div>
+            </div>
+
+            <p>Terus belajar untuk naik level!</p>
+        </div>
+
+        <button class="logout-button" onclick="handleLogout()">
+            <svg viewBox="0 0 24 24" fill="none">
+                <path d="M10 17L15 12L10 7M15 12H3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 3H19C20.1 3 21 3.9 21 5V19C21 20.1 20.1 21 19 21H12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            Keluar
+        </button>
+
+    </div>
+</aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+            <button class="menu-toggle" id="menuToggle">☰</button>
+
+            <div class="search-box">
+                <span>⌕</span>
+                <input type="text" placeholder="Cari materi, kuis, atau tips...">
+            </div>
+
+            <div class="topbar-profile">
+                <button class="notification-button">♧</button>
+
+                <div class="profile-button">
+                    <span class="profile-avatar" id="studentAvatar">?</span>
+
+                    <div class="profile-info">
+                        <strong id="studentName">Memuat...</strong>
+                        <small>Siswa</small>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- CONTENT -->
+        <section class="quiz-content">
+
+            <div class="quiz-heading">
+                <div class="quiz-icon">ⓘ</div>
+
+                <div>
+                    <h1>Kuis Keamanan Siber</h1>
+                    <p>Uji pemahamanmu dan raih skor terbaik.</p>
+                </div>
+            </div>
+
+            <!-- PILIH MATERI -->
+            <section id="materialSelection" class="material-selection">
+                <h2>Pilih Materi Kuis</h2>
+                <p>Pilih materi yang ingin kamu uji pemahamannya.</p>
+
+                <div class="material-grid">
+
+                    <button class="material-card" data-material="1">
+                        <span class="material-number">01</span>
+                        <h3>Dasar Cyber Security</h3>
+                        <p>Pengertian, pentingnya keamanan siber, dan ancaman digital.</p>
+                        <span class="material-total">10 Soal</span>
+                    </button>
+
+                    <button class="material-card" data-material="2">
+                        <span class="material-number">02</span>
+                        <h3>Keamanan Password</h3>
+                        <p>Password kuat, kesalahan penggunaan, dan perlindungan akun.</p>
+                        <span class="material-total">10 Soal</span>
+                    </button>
+
+                    <button class="material-card" data-material="3">
+                        <span class="material-number">03</span>
+                        <h3>Phishing</h3>
+                        <p>Mengenali ciri phishing dan cara menghindarinya.</p>
+                        <span class="material-total">10 Soal</span>
+                    </button>
+
+                    <button class="material-card" data-material="4">
+                        <span class="material-number">04</span>
+                        <h3>Keamanan Media Sosial</h3>
+                        <p>Privasi akun dan keamanan interaksi online.</p>
+                        <span class="material-total">10 Soal</span>
+                    </button>
+
+                    <button class="material-card" data-material="5">
+                        <span class="material-number">05</span>
+                        <h3>Perlindungan Data Pribadi</h3>
+                        <p>Mengenali dan melindungi informasi pribadi.</p>
+                        <span class="material-total">10 Soal</span>
+                    </button>
+
+                    <button class="material-card" data-material="6">
+                        <span class="material-number">06</span>
+                        <h3>Malware dan Ransomware</h3>
+                        <p>Mengenali jenis malware dan langkah pencegahannya.</p>
+                        <span class="material-total">10 Soal</span>
+                    </button>
+
+                </div>
+            </section>
+
+            <!-- AREA PENGERJAAN KUIS -->
+            <section id="quizArea" class="quiz-card" hidden>
+
+                <div class="quiz-top">
+                    <span id="questionNumber">Soal 1 dari 10</span>
+                    <span id="quizTimer">10:00</span>
+                </div>
+
+                <div class="progress-track">
+                    <div id="progressBar"></div>
+                </div>
+
+                <h2 id="questionText">Pertanyaan akan ditampilkan di sini.</h2>
+
+                <div id="answerOptions" class="answer-options"></div>
+
+                
+            <div class="quiz-footer">
+                <span id="answerGuide">Pilih satu jawaban terbaik</span>
+
+                <div class="quiz-actions">
+                    <button id="backToMaterialsButton" type="button">
+                        ← Pilih Kuis Lain
+                    </button>
+
+                    <button id="backButton" type="button">
+                        Sebelumnya
+                    </button>
+
+                    <button id="nextButton" type="button">
+                        Selanjutnya →
+                    </button>
+                </div>
+            </div>
+
+
+            </section>
+
+            <!-- HASIL KUIS -->
+            <section id="resultArea" class="result-card" hidden>
+                <h2>Kuis Selesai!</h2>
+                <p id="resultMaterial">Hasil kuis materi</p>
+                <p id="resultMessage">Hasil belajar kamu akan muncul di sini.</p>
+                <div class="result-score">
+                    <span>Skor Kamu</span>
+                    <strong id="finalScore">0</strong>
+                </div>
+
+                <div class="result-details">
+                    <div>
+                        <strong id="correctAnswers">0</strong>
+                        <span>Jawaban Benar</span>
+                    </div>
+
+                    <div>
+                        <strong id="wrongAnswers">0</strong>
+                        <span>Jawaban Salah</span>
+                    </div>
+                </div>
+
+                <button id="retryButton" type="button">Ulangi Kuis</button>
+                <button id="chooseMaterialButton" type="button">Pilih Materi Lain</button>
+            </section>
+
+        </section>
+
+    </main>
+</div>
+
+<!-- FIREBASE -->
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+
+<script src="js/firebase.js"></script>
+<script src="js/kuis.js"></script>
+
+</body>
+</html>

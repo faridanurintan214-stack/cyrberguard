@@ -1,2 +1,0 @@
-# cyrberguard
-platform keamanan siber

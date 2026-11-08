@@ -1,0 +1,601 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Materi edukasi keamanan siber CyberGuard">
+    <title>Materi Edukasi | CyberGuard</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/materi.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="dashboard-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+
+        <a href="pages/siswa/dashboard.html" class="brand">
+            <span class="brand-icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M12 2L20 5V11C20 16.5 16.5 20 12 22C7.5 20 4 16.5 4 11V5L12 2Z" stroke="white" stroke-width="2"/>
+                    <path d="M8.5 12L11 14.5L16 9.5" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </span>
+            <span>Cyber<span>Guard</span></span>
+        </a>
+
+        <div class="sidebar-content">
+
+            <div class="menu-label">MENU UTAMA</div>
+
+            <nav class="sidebar-nav">
+
+                <a href="pages/siswa/dashboard.html" class="nav-link">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <rect x="3" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2"/>
+                        <rect x="14" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2"/>
+                        <rect x="3" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2"/>
+                        <rect x="14" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="materi.html" class="nav-link active">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M12 7C9 4 5 4 2 5V20C5 19 9 19 12 22C15 19 19 19 22 20V5C19 4 15 4 12 7Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                        <path d="M12 7V22" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <span>Materi Edukasi</span>
+                </a>
+
+                <a href="kuis.html" class="nav-link">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+                        <path d="M9.5 9C9.5 5.5 15 5.5 15 9C15 11 12 11.5 12 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <circle cx="12" cy="17.5" r="1" fill="currentColor"/>
+                    </svg>
+                    <span>Kuis Keamanan Siber</span>
+                </a>
+
+                <a href="simulasi-phishing.html" class="nav-link">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
+                        <path d="M3 6L12 13L21 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <span>Simulasi Phishing</span>
+                </a>
+
+                <a href="tips.html" class="nav-link">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M9 18H15M10 22H14M8.5 14.5C7.5 13.5 6 12 6 9.5A6 6 0 0 1 18 9.5C18 12 16.5 13.5 15.5 14.5C15 15 15 16 15 16H9C9 16 9 15 8.5 14.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <span>Tips Keamanan</span>
+                </a>
+
+            </nav>
+
+            <div class="menu-label account-label">AKUN</div>
+
+            <nav class="sidebar-nav">
+
+                <a href="riwayat.html" class="nav-link">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M3 12A9 9 0 1 0 6 5L3 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M3 3V8H8M12 7V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <span>Riwayat Pembelajaran</span>
+                </a>
+
+                <a href="profil.html" class="nav-link">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/>
+                        <path d="M4 21C4 16.5 7 14 12 14C17 14 20 16.5 20 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <span>Profil Saya</span>
+                </a>
+
+            </nav>
+
+            <!-- LEVEL KEAMANAN -->
+            <div class="security-level">
+                <div class="level-heading">
+                    <span>Level keamanan</span>
+                    <strong>78%</strong>
+                </div>
+
+                <div class="level-track">
+                    <div class="level-fill"></div>
+                </div>
+
+                <p>Terus belajar untuk naik level!</p>
+            </div>
+
+            <button class="logout-button" id="logoutButton">
+                <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M10 17L15 12L10 7M15 12H3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M12 3H19C20.1 3 21 3.9 21 5V19C21 20.1 20.1 21 19 21H12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                Keluar
+            </button>
+
+        </div>
+    </aside>
+
+
+    <!-- AREA UTAMA -->
+    <main class="main-area">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <button class="mobile-menu-button" id="mobileMenuButton" aria-label="Buka menu">
+                ☰
+            </button>
+
+            <div class="search-box">
+                <svg viewBox="0 0 24 24" fill="none">
+                    <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+                    <path d="M16 16L21 21" stroke="currentColor" stroke-width="2"/>
+                </svg>
+
+                <input type="search" id="searchInput" placeholder="Cari materi, topik, atau kata kunci...">
+                <span class="search-shortcut">⌘ K</span>
+            </div>
+
+            <div class="topbar-right">
+
+                <div class="notification-container">
+                    <button class="notification-button" id="notificationButton" aria-label="Notifikasi">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M18 8A6 6 0 0 0 6 8C6 15 3 15 3 18H21C21 15 18 15 18 8Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M10 21H14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span class="notification-dot"></span>
+                    </button>
+
+                    <div class="notification-dropdown" id="notificationDropdown">
+                        <strong>Notifikasi</strong>
+                        <p>Selamat belajar! Tingkatkan pengetahuan keamanan digitalmu melalui materi CyberGuard.</p>
+                    </div>
+                </div>
+
+                <button class="profile-button" id="profileButton">
+                   <span class="profile-avatar" id="studentAvatar">?</span>
+
+                    <span class="profile-info">
+                        <strong id="studentName">Nadia Pratama</strong>
+                        <small>Siswa • Kelas 11</small>
+                    </span>
+
+                    <span class="profile-chevron">⌄</span>
+                </button>
+
+                <div class="profile-dropdown" id="profileDropdown">
+                    <a href="../../profil.html">Profil Saya</a>
+                    <button id="dropdownLogout">Keluar</button>
+                </div>
+
+            </div>
+        </header>
+
+
+        <!-- KONTEN MATERI -->
+        <div class="dashboard-content materi-content">
+
+            <!-- JUDUL HALAMAN -->
+            <section class="materi-heading">
+
+                <div class="materi-title-icon">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M12 7C9 4 5 4 2 5V20C5 19 9 19 12 22C15 19 19 19 22 20V5C19 4 15 4 12 7Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                        <path d="M12 7V22" stroke="currentColor" stroke-width="1.8"/>
+                    </svg>
+                </div>
+
+                <div>
+                    <h1>Materi Edukasi</h1>
+                    <p>
+                        Tingkatkan pengetahuanmu tentang keamanan siber
+                        dan jadilah pengguna digital yang lebih bijak.
+                    </p>
+                </div>
+
+            </section>
+
+
+            <!-- RINGKASAN MATERI -->
+            <section class="materi-summary">
+
+                <div class="summary-text">
+                    <span class="summary-label">PERPUSTAKAAN MATERI</span>
+                    <h2>Jelajahi Pengetahuan Digital</h2>
+                    <p>
+                        Pelajari materi secara bertahap sesuai dengan
+                        tingkat pemahamanmu.
+                    </p>
+                </div>
+
+                <div class="summary-count">
+                    <div class="summary-count-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M4 5.5C4 4.67 4.67 4 5.5 4H19V20H5.5C4.67 20 4 19.33 4 18.5V5.5Z" stroke="currentColor" stroke-width="1.8"/>
+                            <path d="M4 17.5C4 16.67 4.67 16 5.5 16H19M8 8H15M8 11H15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+
+                    <div>
+                        <strong id="totalMateri">6</strong>
+                        <span>Materi tersedia</span>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- FILTER MATERI -->
+            <section class="materi-toolbar">
+
+                <div class="filter-area">
+                    <span class="filter-heading">Kategori Materi</span>
+
+                    <div class="filter-buttons" id="filterButtons">
+                        <button class="filter-button active" data-filter="all">
+                            Semua Materi
+                        </button>
+
+                        <button class="filter-button" data-filter="dasar">
+                            Dasar
+                        </button>
+
+                        <button class="filter-button" data-filter="menengah">
+                            Menengah
+                        </button>
+
+                        <button class="filter-button" data-filter="lanjutan">
+                            Lanjutan
+                        </button>
+                    </div>
+                </div>
+
+                <div class="materi-result">
+                    Menampilkan <strong id="resultCount">6</strong> materi
+                </div>
+
+            </section>
+
+
+            <!-- DAFTAR KARTU MATERI -->
+            <section class="materi-grid" id="materiGrid">
+
+                <!-- MATERI 1 -->
+                <article class="materi-card" data-category="dasar" data-search="mengenal cyber security keamanan siber">
+
+                    <div class="materi-card-visual visual-green">
+                        <span class="visual-label">MATERI 01</span>
+
+                        <div class="visual-circle circle-one"></div>
+                        <div class="visual-circle circle-two"></div>
+
+                        <div class="materi-illustration">
+                            <svg viewBox="0 0 100 100" fill="none">
+                                <path d="M50 8L83 22V45C83 68 69 83 50 94C31 83 17 68 17 45V22L50 8Z" stroke="#6EE7B7" stroke-width="5"/>
+                                <path d="M36 50L46 60L66 39" stroke="#6EE7B7" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+
+                        <span class="visual-number">01</span>
+                    </div>
+
+                    <div class="materi-card-body">
+
+                        <div class="materi-meta">
+                            <span class="category-badge badge-dasar">DASAR</span>
+                            <span class="materi-duration">◷ 8 menit</span>
+                        </div>
+
+                        <h3>Mengenal Cyber Security</h3>
+
+                        <p>
+                            Memahami pengertian keamanan siber, manfaat,
+                            serta pentingnya melindungi aktivitas digital.
+                        </p>
+
+                        <div class="materi-card-footer">
+                            <span class="materi-level">Pemula</span>
+                            <a href="detail-materi.html?id=1" class="materi-link">
+                            Pelajari Sekarang <span>→</span>
+                            </a>    
+                        </div>
+
+                    </div>
+                </article>
+
+
+                <!-- MATERI 2 -->
+                <article class="materi-card" data-category="dasar" data-search="keamanan password kata sandi akun">
+
+                    <div class="materi-card-visual visual-blue">
+                        <span class="visual-label">MATERI 02</span>
+
+                        <div class="visual-circle circle-one"></div>
+                        <div class="visual-circle circle-two"></div>
+
+                        <div class="materi-illustration">
+                            <svg viewBox="0 0 100 100" fill="none">
+                                <rect x="19" y="42" width="62" height="45" rx="9" stroke="#93C5FD" stroke-width="5"/>
+                                <path d="M32 42V29C32 19 40 12 50 12C60 12 68 19 68 29V42" stroke="#93C5FD" stroke-width="5"/>
+                                <circle cx="50" cy="62" r="6" fill="#93C5FD"/>
+                                <path d="M50 68V76" stroke="#93C5FD" stroke-width="4" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+
+                        <span class="visual-number">02</span>
+                    </div>
+
+                    <div class="materi-card-body">
+
+                        <div class="materi-meta">
+                            <span class="category-badge badge-dasar">DASAR</span>
+                            <span class="materi-duration">◷ 10 menit</span>
+                        </div>
+
+                        <h3>Keamanan Password</h3>
+
+                        <p>
+                            Pelajari cara membuat kata sandi yang kuat
+                            dan menjaga keamanan akun pribadi.
+                        </p>
+
+                        <div class="materi-card-footer">
+                            <span class="materi-level">Pemula</span>
+                            <a href="detail-materi.html?id=2" class="materi-link">
+                                Pelajari Sekarang <span>→</span>
+                            </a>
+                        </div>
+
+                    </div>
+                </article>
+
+
+                <!-- MATERI 3 -->
+                <article class="materi-card" data-category="dasar" data-search="phishing email pesan penipuan">
+
+                    <div class="materi-card-visual visual-purple">
+                        <span class="visual-label">MATERI 03</span>
+
+                        <div class="visual-circle circle-one"></div>
+                        <div class="visual-circle circle-two"></div>
+
+                        <div class="materi-illustration">
+                            <svg viewBox="0 0 100 100" fill="none">
+                                <rect x="12" y="25" width="76" height="53" rx="8" stroke="#C4B5FD" stroke-width="5"/>
+                                <path d="M17 31L50 57L83 31" stroke="#C4B5FD" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M50 10V17M10 13L15 19M90 13L85 19" stroke="#C4B5FD" stroke-width="4" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+
+                        <span class="visual-number">03</span>
+                    </div>
+
+                    <div class="materi-card-body">
+
+                        <div class="materi-meta">
+                            <span class="category-badge badge-dasar">DASAR</span>
+                            <span class="materi-duration">◷ 12 menit</span>
+                        </div>
+
+                        <h3>Cara Mengenali Phishing</h3>
+
+                        <p>
+                            Kenali pesan, tautan, dan email palsu
+                            yang digunakan untuk mencuri informasi pribadi.
+                        </p>
+
+                        <div class="materi-card-footer">
+                            <span class="materi-level">Pemula</span>
+                            <a href="detail-materi.html?id=3" class="materi-link">
+                                Pelajari Sekarang <span>→</span>
+                            </a>
+                        </div>
+
+                    </div>
+                </article>
+
+
+                <!-- MATERI 4 -->
+                <article class="materi-card" data-category="menengah" data-search="keamanan media sosial privasi akun">
+
+                    <div class="materi-card-visual visual-orange">
+                        <span class="visual-label">MATERI 04</span>
+
+                        <div class="visual-circle circle-one"></div>
+                        <div class="visual-circle circle-two"></div>
+
+                        <div class="materi-illustration">
+                            <svg viewBox="0 0 100 100" fill="none">
+                                <circle cx="50" cy="50" r="34" stroke="#FDBA74" stroke-width="5"/>
+                                <circle cx="50" cy="39" r="11" stroke="#FDBA74" stroke-width="5"/>
+                                <path d="M28 76C31 62 39 56 50 56C61 56 69 62 72 76" stroke="#FDBA74" stroke-width="5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+
+                        <span class="visual-number">04</span>
+                    </div>
+
+                    <div class="materi-card-body">
+
+                        <div class="materi-meta">
+                            <span class="category-badge badge-menengah">MENENGAH</span>
+                            <span class="materi-duration">◷ 15 menit</span>
+                        </div>
+
+                        <h3>Keamanan Media Sosial</h3>
+
+                        <p>
+                            Pelajari cara menjaga privasi dan
+                            melindungi akun media sosial dari penyalahgunaan.
+                        </p>
+
+                        <div class="materi-card-footer">
+                            <span class="materi-level">Menengah</span>
+                           <a href="detail-materi.html?id=4" class="materi-link">
+                            Pelajari Sekarang <span>→</span>
+                        </a>
+                        </div>
+
+                    </div>
+                </article>
+
+
+                <!-- MATERI 5 -->
+                <article class="materi-card" data-category="menengah" data-search="data pribadi perlindungan informasi digital">
+
+                    <div class="materi-card-visual visual-pink">
+                        <span class="visual-label">MATERI 05</span>
+
+                        <div class="visual-circle circle-one"></div>
+                        <div class="visual-circle circle-two"></div>
+
+                        <div class="materi-illustration">
+                            <svg viewBox="0 0 100 100" fill="none">
+                                <path d="M50 10L84 24V47C84 69 69 84 50 93C31 84 16 69 16 47V24L50 10Z" stroke="#F9A8D4" stroke-width="5"/>
+                                <circle cx="50" cy="43" r="10" stroke="#F9A8D4" stroke-width="5"/>
+                                <path d="M32 72C34 60 41 55 50 55C59 55 66 60 68 72" stroke="#F9A8D4" stroke-width="5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+
+                        <span class="visual-number">05</span>
+                    </div>
+
+                    <div class="materi-card-body">
+
+                        <div class="materi-meta">
+                            <span class="category-badge badge-menengah">MENENGAH</span>
+                            <span class="materi-duration">◷ 12 menit</span>
+                        </div>
+
+                        <h3>Melindungi Data Pribadi</h3>
+
+                        <p>
+                            Ketahui jenis data pribadi dan langkah
+                            menjaga informasi agar tidak disalahgunakan.
+                        </p>
+
+                        <div class="materi-card-footer">
+                            <span class="materi-level">Menengah</span>
+                            <a href="detail-materi.html?id=5" class="materi-link">
+                                Pelajari Sekarang <span>→</span>
+                            </a>
+                        </div>
+
+                    </div>
+                </article>
+
+
+                <!-- MATERI 6 -->
+                <article class="materi-card" data-category="lanjutan" data-search="malware ransomware virus ancaman digital">
+
+                    <div class="materi-card-visual visual-red">
+                        <span class="visual-label">MATERI 06</span>
+
+                        <div class="visual-circle circle-one"></div>
+                        <div class="visual-circle circle-two"></div>
+
+                        <div class="materi-illustration">
+                            <svg viewBox="0 0 100 100" fill="none">
+                                <path d="M50 10L85 29V70L50 90L15 70V29L50 10Z" stroke="#FCA5A5" stroke-width="5"/>
+                                <path d="M50 31V57" stroke="#FCA5A5" stroke-width="6" stroke-linecap="round"/>
+                                <circle cx="50" cy="70" r="4" fill="#FCA5A5"/>
+                            </svg>
+                        </div>
+
+                        <span class="visual-number">06</span>
+                    </div>
+
+                    <div class="materi-card-body">
+
+                        <div class="materi-meta">
+                            <span class="category-badge badge-lanjutan">LANJUTAN</span>
+                            <span class="materi-duration">◷ 18 menit</span>
+                        </div>
+
+                        <h3>Mengenal Malware dan Ransomware</h3>
+
+                        <p>
+                            Pahami jenis perangkat lunak berbahaya,
+                            dampaknya, dan cara menghindarinya.
+                        </p>
+
+                        <div class="materi-card-footer">
+                            <span class="materi-level">Lanjutan</span>
+                            <a href="detail-materi.html?id=6" class="materi-link">
+                                Pelajari Sekarang <span>→</span>
+                            </a>
+                        </div>
+
+                    </div>
+                </article>
+
+            </section>
+
+
+            <!-- PESAN JIKA MATERI TIDAK DITEMUKAN -->
+            <div class="materi-empty" id="materiEmpty">
+                <div class="empty-icon">⌕</div>
+                <h3>Materi tidak ditemukan</h3>
+                <p>Coba gunakan kata kunci atau kategori yang berbeda.</p>
+            </div>
+
+
+            <!-- FOOTER -->
+            <footer class="dashboard-footer">
+                © 2026 CyberGuard — Platform Edukasi Kesadaran Keamanan Siber Sekolah.
+            </footer>
+
+        </div>
+    </main>
+
+</div>
+
+
+<!-- NAVIGASI MOBILE -->
+<nav class="mobile-bottom-nav">
+
+    <a href="pages/siswa/dashboard.html" class="mobile-nav-link">
+        <span>⌂</span>
+        <small>Home</small>
+    </a>
+
+    <a href="materi.html" class="mobile-nav-link active">
+        <span>▤</span>
+        <small>Materi</small>
+    </a>
+
+    <a href="kuis.html" class="mobile-nav-link">
+        <span>◎</span>
+        <small>Kuis</small>
+    </a>
+
+    <a href="profil.html" class="mobile-nav-link">
+        <span>♙</span>
+        <small>Profil</small>
+    </a>
+
+</nav>
+
+<script src="js/materi.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+<script src="js/firebase.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,337 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulasi Phishing | CyberGuard</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/simulasi-phishing.css">
+</head>
+<body>
+
+<div class="dashboard-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+
+        <a href="dashboard.html" class="brand">
+            <span class="brand-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"/>
+                    <path d="m9 12 2 2 4-4"/>
+                </svg>
+            </span>
+            <span>Cyber<span>Guard</span></span>
+        </a>
+
+        <div class="sidebar-content">
+
+            <div class="menu-label">MENU UTAMA</div>
+
+            <nav class="sidebar-nav">
+
+                <a href="dashboard.html" class="nav-link">
+                    <span>▦</span> Dashboard
+                </a>
+
+                <a href="materi.html" class="nav-link">
+                    <span>▣</span> Materi Edukasi
+                </a>
+
+                <a href="kuis.html" class="nav-link">
+                    <span>ⓘ</span> Kuis Keamanan Siber
+                </a>
+
+                <a href="simulasi-phishing.html" class="nav-link active">
+                    <span>✉</span> Simulasi Phishing
+                </a>
+
+                <a href="tips.html" class="nav-link">
+                    <span>♧</span> Tips Keamanan
+                </a>
+
+            </nav>
+
+            <div class="menu-label account-label">AKUN</div>
+
+            <nav class="sidebar-nav">
+
+                <a href="Riwayat.html" class="nav-link">
+                    <span>◷</span> Riwayat Pembelajaran
+                </a>
+
+                <a href="profil.html" class="nav-link">
+                    <span>♙</span> Profil Saya
+                </a>
+
+            </nav>
+
+            <div class="security-level">
+                <div class="security-level-header">
+                    <span>Level keamanan</span>
+                    <strong>78%</strong>
+                </div>
+
+                <div class="security-progress">
+                    <span></span>
+                </div>
+
+                <p>Terus belajar untuk naik level!</p>
+            </div>
+
+            <button class="logout-button" onclick="handleLogout()">
+                <span>⇥</span> Keluar
+            </button>
+
+        </div>
+    </aside>
+
+    <!-- MAIN AREA -->
+    <div class="main-area">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <button class="mobile-menu-button" id="menuToggle">
+                ☰
+            </button>
+
+            <div class="search-box">
+                <span>⌕</span>
+                <input type="text" placeholder="Cari materi, kuis, atau tips...">
+                <small>⌘ K</small>
+            </div>
+
+            <div class="topbar-right">
+
+                <button class="notification-button" aria-label="Notifikasi">
+                    ♧
+                    <span></span>
+                </button>
+
+                <div class="profile-button">
+                    <img
+                        src=""
+                        class="profile-avatar"
+                        id="studentAvatar"
+                        alt="Foto profil siswa"
+                    >
+
+                    <div class="profile-info">
+                        <strong id="studentName">Memuat...</strong>
+                        <small>Siswa</small>
+                    </div>
+
+                </div>
+
+            </div>
+        </header>
+
+        <!-- CONTENT -->
+        <main class="phishing-content">
+
+            <!-- PAGE HEADING -->
+            <section class="phishing-heading">
+
+                <div class="phishing-heading-icon">
+                    ✉
+                </div>
+
+                <div>
+                    <h1>Simulasi Phishing</h1>
+                    <p>
+                        Latih instingmu mengenali pesan mencurigakan
+                        sebelum terlambat.
+                    </p>
+                </div>
+
+            </section>
+
+            <section class="simulation-result" id="simulationResult" hidden>
+                <h2>Hasil Simulasi</h2>
+
+                <div class="result-score">
+                    <span>Skor Kamu</span>
+                    <strong id="finalScore">0</strong>
+                </div>
+                <div class="result-level">
+                    <span>Level Keamanan Kamu</span>
+                    <strong id="studentLevel">Pemula</strong>
+                    <p id="levelDescription">
+                        Terus berlatih untuk meningkatkan kemampuan keamanan digitalmu.
+                    </p>
+                </div>
+
+                <div class="result-summary">
+                    <div>
+                        <strong id="correctCount">0</strong>
+                        <span>Jawaban Benar</span>
+                    </div>
+
+                    <div>
+                        <strong id="wrongCount">0</strong>
+                        <span>Jawaban Salah</span>
+                    </div>
+                </div>
+
+                <div id="answerReview"></div>
+
+                <button type="button" id="restartSimulation">
+                    Ulangi Simulasi
+                </button>
+            </section>
+                    
+        
+            <!-- PILIH JENIS SIMULASI -->
+            <section class="simulation-modes">
+                
+
+                <button class="mode-card active" data-mode="email">
+                    <span>✉️</span>
+                    <strong>Simulasi Email</strong>
+                    <small>Kenali email mencurigakan</small>
+                </button>
+
+                <button class="mode-card" data-mode="message">
+                    <span>📱</span>
+                    <strong>SMS & WhatsApp</strong>
+                    <small>Periksa pesan penipuan</small>
+                </button>
+
+                <button class="mode-card" data-mode="website">
+                    <span>🌐</span>
+                    <strong>Deteksi Website</strong>
+                    <small>Kenali website palsu</small>
+                </button>
+
+            </section>
+            
+            <section class="simulation-layout">
+
+            </section>
+
+                <!-- EMAIL PREVIEW -->
+                <div class="email-card">
+
+                    <div class="simulation-progress">
+                <div class="progress-info">
+                    <strong id="simulationType">Simulasi Email</strong>
+                    <span id="caseNumber">Kasus 1 dari 5</span>
+                </div>
+
+                <div class="progress-track">
+                    <div id="simulationProgressBar"></div>
+                </div>
+            </div>
+
+                    <div class="email-window-header">
+                        <div class="window-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <small>INBOX</small>
+                    </div>
+
+                    <div class="email-content">
+
+                        <div class="email-sender">
+
+                            <div class="sender-avatar">B</div>
+
+                            <div class="sender-info">
+                                <strong>Bank Nusantara</strong>
+                                <span>security@bank-nusantara-verify.xyz</span>
+                            </div>
+
+                            <time>10:42</time>
+
+                        </div>
+
+                        <div class="email-divider"></div>
+
+                        <h2>
+                            PERINGATAN: Akun Anda Akan Diblokir!
+                        </h2>
+
+                        <p>Yth. Nasabah,</p>
+
+                        <p>
+                            Kami mendeteksi aktivitas tidak biasa pada
+                            akun Anda. Segera lakukan verifikasi dalam
+                            <strong>1 × 24 jam</strong> agar akun tidak
+                            diblokir permanen.
+                        </p>
+
+                        <button class="fake-email-button" type="button">
+                            VERIFIKASI AKUN SEKARANG
+                        </button>
+
+                        <div class="email-signature">
+                            <p>Hormat kami,</p>
+                            <p>Tim Keamanan Bank Nusantara</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- IDENTIFICATION PANEL -->
+                <div class="identification-card">
+
+                    <div class="identification-icon">
+                        ⌕
+                    </div>
+
+                    <h2>Apakah pesan ini aman?</h2>
+
+                    <p>
+                        Perhatikan alamat pengirim, isi pesan,
+                        dan tautan sebelum mengambil keputusan.
+                    </p>
+
+                    <button class="identify-button" id="identifyButton">
+                        Identifikasi Pesan
+                        <span>✧</span>
+                    </button>
+
+                </div>
+
+            </section>
+
+            <!-- SECURITY PRINCIPLE -->
+            <section class="security-principle">
+
+                <div class="principle-icon">♙</div>
+
+                <div>
+                    <strong>
+                        Ingat prinsip: Berhenti, Periksa, Pastikan
+                    </strong>
+                    <p>
+                        Jangan terburu-buru membuka tautan atau
+                        memberikan informasi pribadi.
+                    </p>
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</div>
+
+<!-- FIREBASE -->
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+
+<script src="js/firebase.js"></script>
+<script src="js/simulasi-phishing.js"></script>
+
+</body>
+</html>

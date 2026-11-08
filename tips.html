@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tips Keamanan | CyberGuard</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/tips.css">
+</head>
+<body>
+
+    <div class="dashboard-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+        <a href="dashboard.html" class="brand">
+            <span class="brand-icon">🛡️</span>
+            <span>Cyber<span>Guard</span></span>
+        </a>
+
+        <div class="sidebar-content">
+            <div class="menu-label">MENU UTAMA</div>
+
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="materi.html" class="nav-link">Materi Edukasi</a>
+                <a href="kuis.html" class="nav-link">Kuis Keamanan Siber</a>
+                <a href="simulasi-phishing.html" class="nav-link">Simulasi Phishing</a>
+                <a href="tips.html" class="nav-link active">Tips Keamanan</a>
+            </nav>
+
+            <div class="menu-label account-label">AKUN</div>
+
+            <nav class="sidebar-nav">
+                <a href="Riwayat.html" class="nav-link">Riwayat Pembelajaran</a>
+                <a href="profil.html" class="nav-link">Profil Saya</a>
+            </nav>
+
+            <div class="security-level">
+                <strong>Level Keamanan</strong>
+                <p>Terus tingkatkan pengetahuanmu!</p>
+            </div>
+
+            <button class="logout-button" onclick="handleLogout()">
+                Keluar
+            </button>
+        </div>
+    </aside>
+
+    <!-- KONTEN UTAMA -->
+    <div class="main-area">
+
+        <header class="topbar">
+            <button class="mobile-menu-button" id="menuToggle">☰</button>
+
+            <div class="topbar-right">
+                <div class="profile-button">
+                 <img
+                    src=""
+                    class="profile-avatar"
+                    id="studentAvatar"
+                    alt="Foto Profil Siswa"
+                >
+                    <div class="profile-info">
+                        <strong id="studentName">Memuat...</strong>
+                        <small>Siswa</small>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="tips-content">
+            <div class="tips-heading">
+                <h1>Tips Keamanan Siber</h1>
+                <p>Pelajari kebiasaan sederhana untuk melindungi dirimu di dunia digital.</p>
+            </div>
+
+            <section class="tips-grid">
+
+                <article class="tip-card">
+                    <div class="tip-icon">🔐</div>
+                    <h3>Gunakan Password Kuat</h3>
+                    <p>Buat kata sandi yang panjang, unik, dan sulit ditebak. Hindari menggunakan tanggal lahir atau nama pribadi.</p>
+                </article>
+
+                <article class="tip-card">
+                    <div class="tip-icon">🔑</div>
+                    <h3>Aktifkan Verifikasi Dua Langkah</h3>
+                    <p>Gunakan autentikasi dua faktor untuk memberikan perlindungan tambahan pada akunmu.</p>
+                </article>
+
+                <article class="tip-card">
+                    <div class="tip-icon">🎣</div>
+                    <h3>Waspada Terhadap Phishing</h3>
+                    <p>Jangan sembarangan membuka tautan atau lampiran dari pesan yang mencurigakan.</p>
+                </article>
+
+                <article class="tip-card">
+                    <div class="tip-icon">📱</div>
+                    <h3>Jaga Privasi Media Sosial</h3>
+                    <p>Batasi informasi pribadi yang dibagikan dan periksa pengaturan privasi akunmu.</p>
+                </article>
+
+                <article class="tip-card">
+                    <div class="tip-icon">🔄</div>
+                    <h3>Perbarui Perangkat</h3>
+                    <p>Selalu perbarui sistem operasi dan aplikasi untuk mendapatkan perbaikan keamanan terbaru.</p>
+                </article>
+
+                <article class="tip-card">
+                    <div class="tip-icon">🛡️</div>
+                    <h3>Gunakan Antivirus</h3>
+                    <p>Gunakan perangkat lunak keamanan dan hindari mengunduh aplikasi dari sumber tidak terpercaya.</p>
+                </article>
+
+            </section>
+        </main>
+        </div>
+        
+    <!-- PENUTUP DASHBOARD LAYOUT -->
+
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+
+    <script src="js/firebase.js"></script>
+    <script src="js/tips.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riwayat Pembelajaran | CyberGuard</title>
+
+    <link rel="stylesheet" href="css/riwayat.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <main class="history-container">
+
+        <header class="history-header">
+            <a href="pages/siswa/dashboard.html" class="back-button">
+                ← Kembali ke Dashboard
+            </a>
+
+            <h1>Riwayat Pembelajaran</h1>
+            <p>Lihat materi keamanan siber yang sudah kamu selesaikan.</p>
+        </header>
+
+        <section class="history-summary">
+            <div>
+                <span>Total Materi Selesai</span>
+                <strong id="totalCompleted">0</strong>
+            </div>
+
+            <div>
+                <span>Total Materi</span>
+                <strong>6</strong>
+            </div>
+        </section>
+
+        <section class="history-content">
+            <h2>Materi yang Telah Diselesaikan</h2>
+
+            <div id="historyList">
+                <p class="loading-message">Memuat riwayat pembelajaran...</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FIREBASE SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+
+    <!-- FIREBASE CONFIG -->
+    <script src="js/firebase.js"></script>
+
+    <!-- RIWAYAT -->
+    <script src="js/riwayat.js"></script>
+
+</body>
+</html>

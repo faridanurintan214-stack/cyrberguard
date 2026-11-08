@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Siswa | CyberGuard</title>
+
+    <link rel="stylesheet" href="css/profil.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="profile-header">
+        <a href="pages/siswa/dashboard.html" class="back-button">
+            ←
+        </a>
+        <h2>Profil Saya</h2>
+        <span class="header-space"></span>
+    </header>
+
+    <main class="profile-container">
+
+        <!-- PROFIL UTAMA -->
+        <section class="profile-hero">
+
+            <div class="avatar" id="profileAvatar">S</div>
+
+            <input
+                type="file"
+                id="profilePhotoInput"
+                accept="image/jpeg,image/png,image/webp"
+                hidden
+            >
+
+            <button
+                type="button"
+                id="changePhotoButton"
+                class="change-photo-button"
+            >
+                📷 Ganti Foto Profil
+            </button>
+
+            <p id="photoMessage" class="photo-message"></p>
+
+            <h1 id="profileName">Memuat nama...</h1>
+            <p id="profileRole">Siswa CyberGuard</p>
+
+            <span class="account-status">
+                <span class="status-dot"></span>
+                Akun Aktif
+            </span>
+
+        </section>
+
+        <!-- INFORMASI AKUN -->
+        <section class="profile-card">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Informasi Akun</h2>
+                    <p>Informasi identitas akun kamu</p>
+                </div>
+
+                <span class="info-icon">♙</span>
+            </div>
+
+            <div class="info-list">
+
+                <!-- NAMA -->
+                <div class="info-item">
+                    <div class="info-icon-box">♙</div>
+                    <div class="info-content">
+                        <small>Nama Lengkap</small>
+                        <strong id="detailNama">Memuat...</strong>
+                    </div>
+                </div>
+
+                <!-- EMAIL -->
+                <div class="info-item">
+                    <div class="info-icon-box">✉</div>
+                    <div class="info-content">
+                        <small>Email</small>
+                        <strong id="detailEmail">Memuat...</strong>
+                    </div>
+                </div>
+
+                <!-- ROLE -->
+                <div class="info-item">
+                    <div class="info-icon-box">♧</div>
+                    <div class="info-content">
+                        <small>Role Pengguna</small>
+                        <strong id="detailRole">Memuat...</strong>
+                    </div>
+                </div>
+
+                <!-- SEKOLAH -->
+                <div class="info-item">
+                    <div class="info-icon-box">🏫</div>
+                    <div class="info-content">
+                        <small>Nama Sekolah</small>
+                        <strong id="detailSekolah">Belum diisi</strong>
+                    </div>
+                </div>
+
+                <!-- KELAS -->
+                <div class="info-item">
+                    <div class="info-icon-box">📚</div>
+                    <div class="info-content">
+                        <small>Kelas</small>
+                        <strong id="detailKelas">Belum diisi</strong>
+                    </div>
+                </div>
+
+                <!-- STATUS -->
+                <div class="info-item">
+                    <div class="info-icon-box">✓</div>
+                    <div class="info-content">
+                        <small>Status Akun</small>
+                        <strong class="active-text">Aktif</strong>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- TOMBOL EDIT -->
+        <button
+            type="button"
+            id="editProfileButton"
+            class="edit-profile-button"
+        >
+            ✎ Edit Profil
+        </button>
+
+        <!-- FORM EDIT PROFIL -->
+        <section
+            id="editProfileForm"
+            class="edit-profile-form"
+            hidden
+        >
+
+            <h2>Edit Profil Siswa</h2>
+
+            <p>
+                Perbarui informasi identitas akun CyberGuard kamu.
+            </p>
+
+            <!-- EDIT NAMA -->
+            <label for="editNama">Nama Lengkap</label>
+            <input
+                type="text"
+                id="editNama"
+                placeholder="Masukkan nama lengkap"
+                maxlength="60"
+                required
+            >
+
+            <!-- EDIT SEKOLAH -->
+            <label for="editSekolah">Nama Sekolah</label>
+            <input
+                type="text"
+                id="editSekolah"
+                placeholder="Masukkan nama sekolah"
+                maxlength="100"
+            >
+
+            <!-- EDIT KELAS -->
+            <label for="editKelas">Kelas</label>
+            <input
+                type="text"
+                id="editKelas"
+                placeholder="Contoh: XI RPL 1"
+                maxlength="30"
+            >
+
+            <!-- TOMBOL FORM -->
+            <div class="edit-actions">
+
+                <button
+                    type="button"
+                    id="cancelEditButton"
+                    class="cancel-button"
+                >
+                    Batal
+                </button>
+
+                <button
+                    type="button"
+                    id="saveProfileButton"
+                    class="save-button"
+                >
+                    Simpan Perubahan
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- PESAN STATUS -->
+        <div
+            id="profileMessage"
+            class="profile-message"
+            aria-live="polite"
+        ></div>
+
+        <!-- LOGOUT -->
+        <button
+            type="button"
+            id="logoutButton"
+            class="logout-button"
+        >
+            Keluar dari Akun
+        </button>
+
+        <p class="profile-footer">
+            CyberGuard — Belajar Aman, Berinternet Cerdas.
+        </p>
+
+    </main>
+
+    <!-- FIREBASE SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+
+    <!-- FIREBASE CONFIG -->
+    <script src="js/firebase.js"></script>
+
+    <!-- PROFILE SCRIPT -->
+    <script src="js/profil.js"></script>
+
+</body>
+</html>
